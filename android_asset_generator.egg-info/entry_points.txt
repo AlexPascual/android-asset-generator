@@ -1,0 +1,3 @@
+[console_scripts]
+android-asset-generator = generator.gen:main
+

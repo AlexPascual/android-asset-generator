@@ -1,0 +1,10 @@
+README.md
+setup.py
+android_asset_generator.egg-info/PKG-INFO
+android_asset_generator.egg-info/SOURCES.txt
+android_asset_generator.egg-info/dependency_links.txt
+android_asset_generator.egg-info/entry_points.txt
+android_asset_generator.egg-info/requires.txt
+android_asset_generator.egg-info/top_level.txt
+generator/__init__.py
+generator/gen.py
