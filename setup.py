@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="android-asset-generator", # Replace with your own username
-    version="1.0.4",
+    version="1.0.5",
     author="Alejandro Pascual",
     author_email="alex_paz_5599@hotmail.com",
     description="A simple android assets generator",
