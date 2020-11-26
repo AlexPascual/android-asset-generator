@@ -2,6 +2,10 @@
 ___
 ## Description
 android-assset-generator is a command line program for generate ldpi, mdpi, hdpi, xhdpi, xxhdpi and xxxhdpi density images for your Android Studio Project.
+
+##### What's new on v1.0.6?
+* Now you can use relative paths.
+
 ___
 ## Requeriments
 * python-resize-image [View package](https://pypi.org/project/python-resize-image/)
@@ -17,10 +21,10 @@ ___
 
        android-asset-generator  path   density
 
-Argument | Description | Examples
+Argument | Description | Valid Values
 ---------|------------ | -----------
-path     | Full path string of your asset folder or asset file (png or jpg). Set "this" if your console current workspace is the asset folder. If your path contains spaces, use quotation marks ( " ). Example: "C:\Users\MyUser\Pictures\Camera Roll\pp.jpg" | C:\Users\MyUser\Desktop\img or C:\Users\MyUser\Desktop\img\image1.png
-density  | The source density. If your images are mdpi, put mdpi as argument | ldpi, mdpi, hdpi, xhdpi, xxhdpi or xxxhdpi
+path     | Full or relative path string of your asset folder or asset file (png or jpg). Set "this" if your console current workspace is the asset folder. If your path contains spaces, use quotation marks ( " ). Example: "C:\Users\MyUser\Pictures\Camera Roll\pp.jpg" | C:\Users\MyUser\Desktop\img or C:\Users\MyUser\Desktop\img\image1.png or src/asset/image1.png
+density  | The source density. If your images are mdpi, set mdpi as argument | ldpi, mdpi, hdpi, xhdpi, xxhdpi or xxxhdpi
 
 > **Note:** Preferably do not change the order of the arguments.
 
@@ -46,6 +50,9 @@ ___
 
         android-asset-generator this
 > The asset folder path is the console current directory and asset density is hdpi by default
+
+        android-asset-generator img/photo.png
+> The asset folder path is a relative path starting at the current console working directory.
 ___
 
 ## Compatibility
@@ -53,12 +60,17 @@ Operating System | Test Results
 -|-
 Windows 10 | Passed
 MacOS | Testing
-Linux | No tested
+Linux | Testing
 
 Your test results are welcome!
 ___
-## GitHub Repository
+## Repositories
+##### GitHub
 [android-asset-generator](https://github.com/AlexPascual/android-asset-generator)
+
+
+##### PyPI
+[android-asset-generator](https://pypi.org/project/android-asset-generator/)
 
 You are welcome if you want to colaborate!
 ___

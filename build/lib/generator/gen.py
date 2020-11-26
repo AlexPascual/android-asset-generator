@@ -43,6 +43,11 @@ def isPathArgument(path):
         return True
     elif os.path.exists(path):
         return True
+    else:
+        relPath = os.getcwd()
+        relPath = os.path.join(relPath, path)
+        if os.path.exists(relPath):
+            return True
     return False
 
 
@@ -61,6 +66,8 @@ def getPathString(string):
         return os.getcwd()
     elif os.path.isdir(string) or os.path.isfile(string):
         return string
+    elif os.path.isdir(os.path.join(os.getcwd(), string)) or os.path.isfile(os.path.join(os.getcwd(), string)):
+        return os.path.join(os.getcwd(), string)
 
 
 
@@ -164,7 +171,7 @@ def main():
         print("[ ERROR ] More than 2 arguments have been detected")
         sys.exit()
     elif len(sys.argv) == 1:
-        root == os.getcwd()
+        root = os.getcwd()
         density = "hdpi"
     else:
         #Evaluating arg1
